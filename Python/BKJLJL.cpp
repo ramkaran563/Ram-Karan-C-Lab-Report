@@ -1,19 +1,36 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class overload{
-    public:
-    int value;
-    overload(int v){
-        value=v;
-    }
-    overload operator+( overload&obj){
-        overload temp(0);
-        temp.value=value+obj.value;
-        return temp;
-    }
+class Student
+{
+private:
+int rollNo;
+string name;
+public:
+// Constructor
+
+5
+
+Student(int r, string n)
+{
+rollNo = r;
+name = n;
+cout << "Student object created" << endl;
+}
+// Member function
+void display()
+{
+cout << "Roll Number: " << rollNo << endl;
+cout << "Name: " << name << endl;
+}
+// Destructor
+~Student()
+{
+cout << "Student object destroyed" << endl;
+}
 };
-int man(){
-overload n1(10),n2(20),n3(0);
-n3=n1+n2;
-cout<<"sum is:"<<n3.value<<endl;
+int main()
+{
+Student s1(101, "Arun");
+s1.display();
+return 0;
 }
